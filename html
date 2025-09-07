@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Правила поведінки та безпеки</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>Правила поведінки та безпеки</header>
+<nav>
+    <button onclick="showSection('cabinet')">Кабінет</button>
+    <button onclick="showSection('internet')">Інтернет</button>
+</nav>
+
+<main>
+    <section id="cabinet" class="active">
+        <h2>Правила поведінки в кабінеті інформатики</h2>
+        <ul>
+            <li> Заходь у кабінет спокійно, не біжи.</li>
+            <li>Не чіпай обладнання без дозволу вчителя.</li>
+            <li> Сиди рівно, не торкайся екрану руками.</li>
+            <li> Не вмикай та не вимикай комп'ютер без вказівки.</li>
+            <li> Дотримуйся правил техніки безпеки.</li>
+        </ul>
+    </section>
+
+    <section id="internet">
+        <h2>Правила безпеки в Інтернеті</h2>
+        <ul>
+            <li> Не розкривай особисту інформацію стороннім.</li>
+            <li> Використовуй складні паролі.</li>
+            <li> Не відкривай підозрілі посилання.</li>
+            <li> Не завантажуй файли з невідомих джерел.</li>
+            <li> Дотримуйся правил етикету в мережі.</li>
+        </ul>
+    </section>
+</main>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
